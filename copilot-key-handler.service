@@ -1,0 +1,12 @@
+[Unit]
+Description=Copilot Key Handler - Opens Claude Code on Copilot key press
+After=graphical.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/jedijamez/dev/copilot-key-handler/main.py
+Environment=SUDO_USER=jedijamez
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=graphical.target
