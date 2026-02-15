@@ -4,12 +4,12 @@ set -e
 if [ "$1" = "configure" ]; then
     systemctl daemon-reload
     echo ""
-    echo "=== copilot-key-handler installed ==="
+    echo "=== copilot-key-remap-claude installed ==="
     echo ""
     echo "To get started:"
-    echo "  1. Edit /etc/copilot-key-handler/config.yaml (optional - auto-detection is enabled by default)"
+    echo "  1. Edit /etc/copilot-key-remap-claude/config.yaml (optional - auto-detection is enabled by default)"
     echo "  2. Enable and start the service:"
-    echo "     sudo systemctl enable --now copilot-key-handler"
+    echo "     sudo systemctl enable --now copilot-key-remap-claude"
     echo ""
     echo "Press the Copilot key to launch Claude Code!"
     echo ""

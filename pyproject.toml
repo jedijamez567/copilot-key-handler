@@ -1,5 +1,5 @@
 [project]
-name = "copilot-key-handler"
+name = "copilot-key-remap-claude"
 version = "0.1.0"
 description = "Maps the Windows Copilot key to launch Claude Code on Linux"
 readme = "README.md"

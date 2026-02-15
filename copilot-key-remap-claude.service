@@ -4,7 +4,7 @@ After=graphical.target
 
 [Service]
 Environment=PATH=/usr/bin:/bin:/usr/sbin:/sbin
-ExecStart=/usr/bin/python3 -u /usr/lib/copilot-key-handler/main.py
+ExecStart=/usr/bin/python3 -u /usr/lib/copilot-key-remap-claude/main.py
 Restart=on-failure
 RestartSec=5
 

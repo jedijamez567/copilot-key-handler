@@ -10,7 +10,7 @@ import pwd
 import yaml
 
 
-CONFIG_PATH = '/etc/copilot-key-handler/config.yaml'
+CONFIG_PATH = '/etc/copilot-key-remap-claude/config.yaml'
 DEFAULT_CONFIG = {
     'device': 'auto',
     'terminal': 'gnome-terminal',
@@ -193,15 +193,15 @@ def main():
         device_path = detect_device()
 
     if not device_path:
-        print('copilot-key-handler: no device with KEY_F23 found. '
-              'Set device path in /etc/copilot-key-handler/config.yaml',
+        print('copilot-key-remap-claude: no device with KEY_F23 found. '
+              'Set device path in /etc/copilot-key-remap-claude/config.yaml',
               file=sys.stderr, flush=True)
         sys.exit(1)
 
     terminal = config['terminal']
     home = get_home_dir(user)
 
-    print(f'copilot-key-handler: user={user} device={device_path} '
+    print(f'copilot-key-remap-claude: user={user} device={device_path} '
           f'terminal={terminal} claude={claude_path} display={display}',
           flush=True)
 

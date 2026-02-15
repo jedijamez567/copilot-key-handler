@@ -2,7 +2,7 @@
 set -e
 
 if [ "$1" = "purge" ]; then
-    rm -rf /etc/copilot-key-handler
+    rm -rf /etc/copilot-key-remap-claude
 fi
 
 systemctl daemon-reload 2>/dev/null || true

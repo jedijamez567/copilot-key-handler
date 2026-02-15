@@ -1,5 +1,5 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: copilot-key-handler
+Upstream-Name: copilot-key-remap-claude
 Upstream-Contact: Dakota Smith <smith.dakota52@gmail.com>
 
 Files: *

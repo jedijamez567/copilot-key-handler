@@ -13,15 +13,15 @@ If a terminal window is focused when the key is pressed, Claude Code opens in th
 ### From PPA (recommended)
 
 ```bash
-sudo add-apt-repository ppa:jedijamez/copilot-key-handler
+sudo add-apt-repository ppa:jedijamez567/linux-tools
 sudo apt update
-sudo apt install copilot-key-handler
+sudo apt install copilot-key-remap-claude
 ```
 
 Then enable the service:
 
 ```bash
-sudo systemctl enable --now copilot-key-handler
+sudo systemctl enable --now copilot-key-remap-claude
 ```
 
 ### Manual installation
@@ -31,18 +31,18 @@ sudo systemctl enable --now copilot-key-handler
 sudo apt install python3-evdev python3-yaml xdotool x11-utils
 
 # Clone and install
-git clone https://github.com/jedijamez/copilot-key-handler.git
-cd copilot-key-handler
-sudo install -D -m 0755 main.py /usr/lib/copilot-key-handler/main.py
-sudo install -D -m 0644 config.yaml.default /etc/copilot-key-handler/config.yaml
-sudo install -D -m 0644 copilot-key-handler.service /lib/systemd/system/copilot-key-handler.service
+git clone https://github.com/jedijamez/copilot-key-remap-claude.git
+cd copilot-key-remap-claude
+sudo install -D -m 0755 main.py /usr/lib/copilot-key-remap-claude/main.py
+sudo install -D -m 0644 config.yaml.default /etc/copilot-key-remap-claude/config.yaml
+sudo install -D -m 0644 copilot-key-remap-claude.service /lib/systemd/system/copilot-key-remap-claude.service
 sudo systemctl daemon-reload
-sudo systemctl enable --now copilot-key-handler
+sudo systemctl enable --now copilot-key-remap-claude
 ```
 
 ## Configuration
 
-Edit `/etc/copilot-key-handler/config.yaml` to customize:
+Edit `/etc/copilot-key-remap-claude/config.yaml` to customize:
 
 - **device** — Input device path (default: `auto` — scans for KEY_F23 support)
 - **terminal** — Terminal emulator: `gnome-terminal`, `kitty`, or `alacritty` (default: `gnome-terminal`)
@@ -53,7 +53,7 @@ Edit `/etc/copilot-key-handler/config.yaml` to customize:
 After editing, restart the service:
 
 ```bash
-sudo systemctl restart copilot-key-handler
+sudo systemctl restart copilot-key-remap-claude
 ```
 
 ## Usage
@@ -63,13 +63,13 @@ Once installed and enabled, press the Copilot key to launch Claude Code.
 To check the service status:
 
 ```bash
-sudo systemctl status copilot-key-handler
+sudo systemctl status copilot-key-remap-claude
 ```
 
 To view logs:
 
 ```bash
-journalctl -u copilot-key-handler -f
+journalctl -u copilot-key-remap-claude -f
 ```
 
 ## Dependencies

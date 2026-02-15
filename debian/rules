@@ -4,6 +4,6 @@
 	dh $@
 
 override_dh_auto_install:
-	install -D -m 0755 main.py $(CURDIR)/debian/copilot-key-handler/usr/lib/copilot-key-handler/main.py
-	install -D -m 0644 config.yaml.default $(CURDIR)/debian/copilot-key-handler/etc/copilot-key-handler/config.yaml
-	install -D -m 0644 copilot-key-handler.service $(CURDIR)/debian/copilot-key-handler/lib/systemd/system/copilot-key-handler.service
+	install -D -m 0755 main.py $(CURDIR)/debian/copilot-key-remap-claude/usr/lib/copilot-key-remap-claude/main.py
+	install -D -m 0644 config.yaml.default $(CURDIR)/debian/copilot-key-remap-claude/etc/copilot-key-remap-claude/config.yaml
+	install -D -m 0644 copilot-key-remap-claude.service $(CURDIR)/debian/copilot-key-remap-claude/lib/systemd/system/copilot-key-remap-claude.service

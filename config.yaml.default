@@ -1,5 +1,5 @@
 # Copilot Key Handler Configuration
-# Copy this file to /etc/copilot-key-handler/config.yaml and edit as needed.
+# Copy this file to /etc/copilot-key-remap-claude/config.yaml and edit as needed.
 
 # Input device path for the keyboard with the Copilot key.
 # Find yours with: cat /proc/bus/input/devices

@@ -2,8 +2,8 @@
 set -e
 
 if [ "$1" = "remove" ]; then
-    systemctl stop copilot-key-handler 2>/dev/null || true
-    systemctl disable copilot-key-handler 2>/dev/null || true
+    systemctl stop copilot-key-remap-claude 2>/dev/null || true
+    systemctl disable copilot-key-remap-claude 2>/dev/null || true
 fi
 
 #DEBHELPER#
